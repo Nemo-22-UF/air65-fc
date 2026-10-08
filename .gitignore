@@ -1,0 +1,8 @@
+build/
+*.o
+*.exe
+.vscode/
+.DS_Store
+*.csv
+!docs/**/*.csv
+__pycache__/
