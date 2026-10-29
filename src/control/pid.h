@@ -1,6 +1,8 @@
 #ifndef PID_H
 #define PID_H
 
+#include <stdbool.h>
+
 typedef struct {
     float kp, ki, kd;
     float i_limit;
@@ -9,6 +11,7 @@ typedef struct {
     float prev_meas;
     float d_filt;
     float d_lpf_alpha;
+    bool has_prev_meas;
 } pid_ctrl_t;
 
 void pid_init(pid_ctrl_t *p, float kp, float ki, float kd, float i_limit, float out_limit);
