@@ -34,6 +34,7 @@ enable_testing()
 add_executable(air65_tests
   tests/test_main.c
   tests/test_mixer.c
+  tests/test_safety.c
 )
 target_include_directories(air65_tests PRIVATE tests)
 target_link_libraries(air65_tests fc_core)
